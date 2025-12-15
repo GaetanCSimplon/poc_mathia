@@ -2,7 +2,7 @@
 import os
 from dotenv import load_dotenv
 from mistralai import Mistral
-from math_tools import calculate
+from logic.math_tools import calculate
 import json
 
 load_dotenv()
