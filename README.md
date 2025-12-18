@@ -39,3 +39,5 @@ L'application devra fournir un contenu adaptatif en fonction des diverses pathol
 mathématiques arithmétiques pour élèves de CM1-CM2
 à l’aide de grands modèles de langue via ingénierie de
 prompt. - Ousseynou Gueye, 2025](https://theses.hal.science/tel-05219692/file/2024PA100106.pdf)
+
+[ÉLABORATION D’UNE TYPOLOGIE DES ERREURS EN MATHEMATIQUES POUR CONCEVOIR DES FEEDBACKS ADAPTATIFS - FOUCHET-ISAMBARD, K. ET MILLON-FAURE, 2025](https://hal.science/hal-05361521v1/document)
