@@ -24,6 +24,7 @@ Tentative de reproduction partielle de l'application MathIA.
 ## Ressources
 
 [LES ERREURS DES ÉLÈVES EN MATHÉMATIQUES - Guy Brousseau, 2001](https://irem.univ-grenoble-alpes.fr/medias/fichier/57x1_1561038496369-pdf)
+
 [Personnalisation adaptative de problèmes
 mathématiques arithmétiques pour élèves de CM1-CM2
 à l’aide de grands modèles de langue via ingénierie de
