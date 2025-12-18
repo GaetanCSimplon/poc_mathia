@@ -21,6 +21,16 @@ Tentative de reproduction partielle de l'application MathIA.
 - IA : API Mistral (mistral-small-latest) / Azure Speech (traitement audio STT/TTS)
 - Librairie : Streamlit (front)
 
+## Adaptative Learning
+
+Afin d'adapter au mieux les réponses du modèle, il est nécessaire de lui fournir les données qui lui permette d'identifier le niveau de l'élève.
+
+Pour ce faire, l'application doit pouvoir mettre en place un système d'évaluation en fonction de l'apprentissage visé ; le point de départ est la notion abordée (calcul, problèmes, calcul mental...) et la classe de l'élève. A partir de ces informations, l'application peut proposer un exercice type sur lequel l'élève va travailler ou l'élève va expliciter ses difficultés. L'enjeu sera donc d'orienter le modèle sur les difficultés rencontrées, l'utilisation d'une logique d'apprentissage adaptatif rentre en jeu. Il consiste à fournir au modèle des informations sur le type de problème rencontré: en se basant sur les travaux de BROUSSEAU G. et FOUCHET-ISAMBARD, K. ET MILLON-FAURE, on fournit à l'application un ensemble de données qui explicite les erreurs-type. Chaque type d'erreur contient alors un ensemble d'informations spécifiques à une erreur données ; on fournit un exemple type ainsi qu'une remédiation.
+
+### Cas des troubles "dys"
+
+L'application devra fournir un contenu adaptatif en fonction des diverses pathologies de l'élève. 
+
 ## Ressources
 
 [LES ERREURS DES ÉLÈVES EN MATHÉMATIQUES - Guy Brousseau, 2001](https://irem.univ-grenoble-alpes.fr/medias/fichier/57x1_1561038496369-pdf)
