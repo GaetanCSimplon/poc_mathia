@@ -31,6 +31,19 @@ Pour ce faire, l'application doit pouvoir mettre en place un système d'évaluat
 
 L'application devra fournir un contenu adaptatif en fonction des diverses pathologies de l'élève. 
 
+## Etat actuel de l'application (22/12/2025)
+
+L'implémentation de l'adaptative learning n'est pas encore fonctionnel ; il faut revoir la logique du traitement des informations par le LLM dans le sens où l'ordre d'appel des fonctions doit être revu :
+
+Pour le moment, le LLM reçoit les inputs utilisateurs, respecte les instructions de base, utilise la fonction ```calculate``` pour gérer les calculs. Cependant, le système d'apprentissage adaptatif n'est pas utilisé et doit être intégré en amont de la génération de réponse.
+
+## Axes d'améliorations
+
+- Intégrer l'adaptative learning
+- Créer des catégories d'exercices pour adapter au mieux le LLM aux réponses à fournir
+- Tester la génération d'illustration et l'intégrer au POC
+- Déploiement test
+
 ## Ressources
 
 [LES ERREURS DES ÉLÈVES EN MATHÉMATIQUES - Guy Brousseau, 2001](https://irem.univ-grenoble-alpes.fr/medias/fichier/57x1_1561038496369-pdf)
