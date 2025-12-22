@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 from mistralai import Mistral
 from logic.math_tools import calculate
+from logic.adaptative import analyze_student_error
 import json
 
 load_dotenv()
@@ -33,6 +34,22 @@ tools = [
 def get_ai_response(user_message: str, conversation_history: list = None, is_voice_mode: bool = False) -> str:
     if conversation_history is None:
         conversation_history = []
+    
+    diagnostic = analyze_student_error(user_message, "Inconnu", conversation_history)
+    
+    adaptative_prompt_section = ""
+    if diagnostic:
+        print(f"[DEBUG] Diagnostic : {diagnostic['name']}")
+        adaptative_prompt_section = f"""
+        DIAGNOSTIC PEDAGOGIQUE (PRIORITAIRE) :
+        L'élève semble commettre l'erreur type : {diagnostic['name']} ({diagnostic['category']}).
+        
+        STRATEGIE DE REMEDIATION A APPLIQUER :
+        {diagnostic['remediation']}
+        
+        Suis scrupuleusement cette stratégie pour ta réponse.
+        """
+
 
     # Consignes de base
     base_prompt = """
@@ -72,7 +89,7 @@ def get_ai_response(user_message: str, conversation_history: list = None, is_voi
 
     system_prompt = {
         "role": "system",
-        "content": base_prompt + format_instructions
+        "content": base_prompt + adaptative_prompt_section + format_instructions
     }
 
     messages = [system_prompt] + conversation_history + [{"role": "user", "content": user_message}]
